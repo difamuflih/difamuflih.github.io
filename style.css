@@ -1,10 +1,15 @@
+nav,
+footer,
+.btn {
+  background-color: #071e3d;
+}
 .jumbotron {
   padding-top: 6rem;
-  background-color: #e2edff;
+  background-color: #1f4287;
 }
 
 #project {
-  background-color: #e2edff;
+  background-color: #1f4287;
 }
 
 section {
