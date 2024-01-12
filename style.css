@@ -1,7 +1,11 @@
 nav,
 footer,
-.btn {
+.col-md-6 form .btn {
   background-color: #071e3d;
+  color: white;
+}
+.btn:hover {
+  color: #071e3d;
 }
 .jumbotron {
   padding-top: 6rem;

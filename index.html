@@ -227,7 +227,19 @@
         </div>
         <div class="row justify-content-center mb-3">
           <div class="col-md-6">
-            <form>
+            <div
+              class="alert alert-success alert-dismissible fade show d-none my-alert"
+              role="alert"
+            >
+              <strong>Terimakasih!</strong> You Pesan Anda sudah kami terima.
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
+            </div>
+            <form name="contact-form">
               <div class="mb-3">
                 <label
                   for="name"
@@ -239,6 +251,7 @@
                   class="form-control"
                   id="name"
                   aria-describedby="name"
+                  name="nama"
                 />
               </div>
               <div class="mb-3">
@@ -252,6 +265,7 @@
                   class="form-control"
                   id="email"
                   aria-describedby="email"
+                  name="email"
                 />
               </div>
               <div class="mb-3">
@@ -264,14 +278,26 @@
                   class="form-control"
                   id="pesan"
                   rows="3"
+                  name="pesan"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                class="btn text-white"
+                class="btn btn-kirim"
               >
                 Kirim
+              </button>
+              <button
+                class="btn d-none btn-loading"
+                type="button"
+                disabled
+              >
+                <span
+                  class="spinner-border spinner-border-sm"
+                  aria-hidden="true"
+                ></span>
+                <span role="status">Loading...</span>
               </button>
             </form>
           </div>
@@ -310,5 +336,33 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbw1FH26Z21gOUsjwm_IAWDG4FlOFkFfEy0PrbTDi26_Dn6SabwmAma6rcBsdkgoCdlY/exec";
+      const form = document.forms["contact-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const btnAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        //Ketika tombol submit diklik
+        //tampilkan tombol loading,hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            //tampilkan tombol kirim,hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            //tampilkan alert
+            btnAlert.classList.toggle("d-none");
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
