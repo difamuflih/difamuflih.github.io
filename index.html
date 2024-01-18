@@ -20,6 +20,11 @@
 
     <link
       rel="stylesheet"
+      href="https://unpkg.com/aos@next/dist/aos.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="style.css"
     />
   </head>
@@ -88,7 +93,7 @@
         class="rounded-circle img-thumbnail"
       />
       <h1 class="display-4">Difa Muflih</h1>
-      <p class="lead">Student</p>
+      <p class="lead"></p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
@@ -112,10 +117,22 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center mt-3">
-          <div class="col-md-4">
+          <div
+            class="col-md-4"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio praesentium quae consectetur amet quibusdam esse facilis doloribus assumenda molestiae harum.</p>
           </div>
-          <div class="col-md-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi vitae magni autem voluptatem necessitatibus quas ex itaque? Numquam, quasi quisquam earum veniam dolor mollitia?</div>
+          <div
+            class="col-md-4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quasi vitae magni autem voluptatem necessitatibus quas ex itaque? Numquam, quasi quisquam earum veniam dolor mollitia?
+          </div>
         </div>
       </div>
       <svg
@@ -141,10 +158,14 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
+          <div
+            class="col-md-4 mb-3"
+            data-aos="flip-left"
+            data-aos-duration="1000"
+          >
             <div class="card">
               <img
-                src="img/bernin-uben-b20J7YbTK8w-unsplash.jpg"
+                src="img/1.jpg"
                 class="card-img-top"
                 alt="..."
               />
@@ -153,10 +174,15 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div
+            class="col-md-4 mb-3"
+            data-aos="flip-left"
+            data-aos-duration="500"
+            data-aos-delay="100"
+          >
             <div class="card">
               <img
-                src="img/hari-tran-ZXYtiSRfsQo-unsplash.jpg"
+                src="img/2.jpg"
                 class="card-img-top"
                 alt="..."
               />
@@ -165,10 +191,15 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div
+            class="col-md-4 mb-3"
+            data-aos="flip-left"
+            data-aos-duration="500"
+            data-aos-delay="200"
+          >
             <div class="card">
               <img
-                src="img/jay-zhang-2MCF_5fdcnU-unsplash.jpg"
+                src="img/3.jpg"
                 class="card-img-top"
                 alt="..."
               />
@@ -177,10 +208,15 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div
+            class="col-md-4 mb-3"
+            data-aos="flip-left"
+            data-aos-duration="500"
+            data-aos-delay="400"
+          >
             <div class="card">
               <img
-                src="img/joey-r-syRQqk4ory4-unsplash.jpg"
+                src="img/4.jpg"
                 class="card-img-top"
                 alt="..."
               />
@@ -189,10 +225,15 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div
+            class="col-md-4 mb-3"
+            data-aos="flip-left"
+            data-aos-duration="500"
+            data-aos-delay="500"
+          >
             <div class="card">
               <img
-                src="img/michelle-ding-sfKigQv7viY-unsplash.jpg"
+                src="img/5.jpg"
                 class="card-img-top"
                 alt="..."
               />
@@ -216,12 +257,118 @@
     </section>
     <!-- Akhir Priject -->
 
+    <!-- Galery -->
+
+    <section id="gallery">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/gallery/1.jpg"
+                alt="gambar 1"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/gallery/2.jpg"
+                alt="gambar 2"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/gallery/3.jpg"
+                alt="gambar 3"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/gallery/4.jpg"
+                alt="gambar 4"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/gallery/5.jpg"
+                alt="gambar 5"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/gallery/6.jpg"
+                alt="gambar 6"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/gallery/7.jpg"
+                alt="gambar 7"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/gallery/8.jpg"
+                alt="gambar 8"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/gallery/9.jpg"
+                alt="gambar 9"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img
+                src="img/gallery/10.jpg"
+                alt="gambar 10"
+                class="img-fluid gallery-img"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Akhir Galery -->
+
     <!-- Contact -->
 
     <section id="contact">
       <div class="container">
         <div class="row">
-          <div class="col text-center">
+          <div class="col text-center mb-3">
             <h2>Contact Me</h2>
           </div>
         </div>
@@ -336,6 +483,31 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galleryImage = document.querySelectorAll(".gallery-img");
+
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+
+      AOS.init({
+        once: true,
+        duration: 2000,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+    <script>
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Junior Web Developer" });
+      gsap.from(".jumbotron img", { duration: 1, opacity: 0, rotateY: 360 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
 
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbw1FH26Z21gOUsjwm_IAWDG4FlOFkFfEy0PrbTDi26_Dn6SabwmAma6rcBsdkgoCdlY/exec";
